@@ -1,2 +1,2 @@
-# BaseStyles
+# Base CSS Stylesheets
 I find myself repeatedly writing the same css over and over again when creating front-end websites.  After doing this more than a few times I decided to create a sass project where I do all of my future css.  When starting a new project I will use the base css generated from the sass project, if I need to write more custom css for the project that I think may be useful in future projects than I will add it to this sass project.
