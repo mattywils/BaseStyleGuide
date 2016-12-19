@@ -1,0 +1,14 @@
+$color-names: 'navy' 'blue' 'aqua' 'teal' 'olive' 'green' 'lime' 'yellow' 'orange' 'red' 'maroon' 'fuchsia' 'purple' 'black' 'gray' 'silver' 'white';
+$color-values: #001f3f #0074D9 #7FDBFF #39CCCC #3D9970 #2ECC40 #01FF70 #FFDC00 #FF851B #FF4136 #85144b #F012BE #B10DC9 #111111 #AAAAAA #DDDDDD #FFFFFF;
+@each $color in $color-names {
+    $i: index($color-names, $color);
+    .#{$color}-text {
+        color: nth($color-values, $i) !important;
+    }
+    .#{$color}-background {
+        background-color: nth($color-values, $i) !important;
+    }
+    .#{$color}-border {
+        border-color: nth($color-values, $i) !important;
+    }
+}

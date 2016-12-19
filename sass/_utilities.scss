@@ -1,0 +1,48 @@
+.center {
+    margin: 0 auto;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+
+.textLeft {
+    text-align: left;
+}
+
+.textRight {
+    text-align: right;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+.vertically-center-children {
+    align-items: center;
+}
+
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+.fullWidth {
+    width: 100%;
+}
+
+
+hr {
+    border: 0.0625em solid #eaeaea;
+    margin-bottom: 1.25em;
+}
