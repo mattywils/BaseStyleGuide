@@ -1,49 +1,48 @@
 label {
     display: block;
     width: 100%;
-    font-size: 1.125em;
-	font-weight: 400;
+    font-size: 1.25em;
+	font-weight: 600;
     line-height: 1.75em;
+    margin-bottom: .25em;
 }
 
-input {
+input, select, textarea {
     display: block;
     width: 100%;
     font-size: 1.125em;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
+    margin-bottom: .75em;
+    border: .125em solid #eaeaea;
+    border-radius: .625em;
+    padding: .75em;
+
+    transition: border-color 0.5s ease;
+
+    &:focus {
+        border-color: $color-primary;
+    }
 }
 
-input[type="submit"] {
-    width: auto;
+.invalid {
+    border-color: #FF4136;
+
+    transition: border-color 0.5s ease;
+
+    &:focus {
+        border-color: #FF851B;
+    }
 }
 
-select {
-    display: block;
-    font-size: 1.125em;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-textarea {
-    display: block;
-    width: 100%;
-    font-size: 1.125em;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
+.validation {
+    margin-top: -0.5em;
+    color: #FF4136;
 }
 
 fieldset {
-    margin-bottom: 10px;
+    margin-bottom: .625em;
 
     label {
-        padding-right: 10px;
+        padding-right: .625em;
         display: inline-block;
         width: auto;
     }
@@ -63,18 +62,15 @@ fieldset {
     margin: 0;
 }
 
-.inlineForm {
-    display: table;
-    vertical-align: middle;
-    width: 100%;
-
-    > label {
-        width: auto;
-        display: table-cell;
+.searchBar {
+    .searchIcon {
+        position: absolute;
+        box-sizing: content-box;
+        padding: 1.125em;
+        width: 1.125em;
     }
 
-    > input {
-        width: auto;
-        display: table-cell;
+    input {
+        padding-left: 2.75em;
     }
 }

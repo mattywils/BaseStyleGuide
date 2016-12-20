@@ -2,7 +2,7 @@
 	<head>
 		<title>Matts Bootstrap Examples</title>
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-		<link href="stylesheets/mattsBootstrap.css" rel="stylesheet">
+		<link href="stylesheets/base.css" rel="stylesheet">
 		<style type="text/css">
 			@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 
@@ -208,6 +208,20 @@
 				<input id="textField" type="text" placeholder="Placeholder text" />
 			</div>
 			<div class="column-12">
+				<label for="textField">Text Field Validation Error!</label>
+				<input class="invalid" id="textField" type="text" placeholder="Placeholder text" />
+				<p class="validation">You must enter a valid value!</p>
+			</div>
+			<div class="column-12">
+				<fieldset class="searchBar">
+					<svg class="searchIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 352">
+						<circle cx="144" cy="144" r="120" stroke-width="48" fill="none" stroke="black"></circle>
+						<rect x="245" y="205" width="160" height="56" rx="15" ry="15" transform="rotate(45, 245, 205)" fill="black"></rect>
+					</svg>
+					<input placeholder="Search Text" />
+				</fieldset>
+			</div>
+			<div class="column-12">
 				<label for="textArea">Text Area</label>
 				<textarea id="textArea" placeholder="Placeholder text"></textarea>
 			</div>
@@ -243,17 +257,6 @@
 		</section>
 
 		<!--
-		<section class="container center">
-			<div class="column-12"><h1>Inline Forms</h1><hr /></div>
-			<div class="column-12">
-				<div class="inlineForm">
-					<label for="inlineTextField">Text Field</label>
-					<input id="inlineTextField" type="text" placeholder="Placeholder text" />
-					<input type="submit" value="Search" />
-				</div>
-			</div>
-		</section>
-
 		<section class="container center">
 			<div class="column-12"><h1>Buttons</h1><hr /></div>
 			<div class="column-12">
