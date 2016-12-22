@@ -1,26 +1,65 @@
 @mixin button-stuff() {
     display: inline-block;
-    border-radius: 8px;
-    padding: 12px 15px;
+    border-radius: .5em;
+
+    font-size: 1.125em;
+	font-weight: 400;
+    margin-bottom: .75em;
+    border-radius: .625em;
+    padding: .75em;
 }
 
 .btn {
     @include button-stuff();
-    color: white;
-    background-color: #555;
-    border: 1px solid transparent;
+
+    color: $medium-text-color;
+    background-color: #eaeaea;
+    border: 0.125em solid #eaeaea;
+
+    transition: background-color 0.5s ease,
+                color 0.5s ease;
 
     &:hover {
-        background-color: lighten(#555, 10);
+        color: $color-primary;
+        background-color: transparent;
     }
 }
 
 .btn-bordered {
     @include button-stuff();
-    color: #555;
-    border: 1px solid #555;
+
+    color: $medium-text-color;
+    background-color: transparent;
+    border: 0.125em solid #eaeaea;
+
+    transition: background-color 0.5s ease,
+                color 0.5s ease;
 
     &:hover {
-        border-color: lighten(#555, 20);
+        color: $color-primary;
+        background-color: #eaeaea;
+    }
+}
+
+@each $color in $color-names {
+    $i: index($color-names, $color);
+    .#{$color}-btn {
+        background-color: nth($color-values, $i);
+        border-color: nth($color-values, $i);
+
+        &:hover {
+            color: nth($color-values, $i) !important;
+            background-color: transparent;
+        }
+    }
+
+    .#{$color}-btn-bordered {
+        background-color: transparent;
+        border-color: nth($color-values, $i);
+
+        &:hover {
+            color: white !important;
+            background-color: nth($color-values, $i);
+        }
     }
 }
