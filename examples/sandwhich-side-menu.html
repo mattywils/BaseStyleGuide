@@ -10,12 +10,13 @@
 				font-family: 'Open Sans', sans-serif;
 			}
 		</style>
+		<script src="../javascript/menuControl.js"></script>
 	</head>
 	<body>
 		<section class="menuBar">
-			<div id="mainMenuToggle" class="open">
+			<div id="mainMenuElementId" class="closed">
 				<header>
-					<div class="toggle" onclick="toggleMenu()">
+					<div class="toggle" onclick="toggleMenu('mainMenuElementId')">
 						<span class="text">Menu</span>
 						<svg class="barsIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
 							<circle cx="320" cy="320" r="300" stroke-width="40"></circle>
@@ -101,16 +102,5 @@
 		<h1>Other Content</h1>
 		<h1>Other Content</h1>
 		<h1>Other Content</h1>
-
-		<script type="text/javascript">
-			function toggleMenu() {
-				var menuToggleElement = document.getElementById("mainMenuToggle");
-				if(menuToggleElement.className === "open") {
-					menuToggleElement.className = "closed";
-				} else {
-					menuToggleElement.className = "open";
-				}
-			}
-		</script>
 	</body>
 </html>
