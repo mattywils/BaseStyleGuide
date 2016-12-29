@@ -5,7 +5,7 @@
 
 body {
 	color: $dark-text-color;
-	font-family: sans-serif;
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
 	font-size: ($base-point-grid * 2) * 1px;
 
 	@media (-webkit-min-device-pixel-ratio: 2) {
