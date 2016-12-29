@@ -3,15 +3,15 @@ $light-table-border-color: #ccc;
 
 table {
     width: 100%;
-    border: 1px solid $light-table-border-color;
+    border: 0.0625em solid $light-table-border-color;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin: 1.25em 0;
 
     thead {
         tr {
             th {
                 text-align: left;
-                padding: 10px;
+                padding: 0.625em;
             }
         }
     }
@@ -19,9 +19,9 @@ table {
     tbody {
         tr {
             td {
-                border-right: 1px solid $light-table-border-color;
-                border-bottom: 1px solid $light-table-border-color;
-                padding: 10px;
+                border-right: 0.0625em solid $light-table-border-color;
+                border-bottom: 0.0625em solid $light-table-border-color;
+                padding: 0.625em;
 
                 &:last-child {
                     border-right: none;
@@ -30,7 +30,7 @@ table {
 
             &:first-child {
                 td {
-                    border-top: 2px solid $dark-table-border-color;
+                    border-top: 0.125em solid $dark-table-border-color;
                 }
             }
 
