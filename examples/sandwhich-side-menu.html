@@ -2,7 +2,9 @@
 	<head>
 		<title>Matts Bootstrap Examples</title>
 		<link href="../stylesheets/base.css" rel="stylesheet">
-		<script src="../javascript/menuControl.js"></script>
+
+		<link rel="preload" href="../javascript/menuControl.js" as="script">
+		<link rel="prefetch" href="../javascript/menuControl.js">	
 	</head>
 	<body>
 		<section class="menuBar">
@@ -94,5 +96,7 @@
 		<h1>Other Content</h1>
 		<h1>Other Content</h1>
 		<h1>Other Content</h1>
+
+		<script async src="../javascript/menuControl.js"></script>
 	</body>
 </html>
