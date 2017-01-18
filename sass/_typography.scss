@@ -52,14 +52,18 @@ h6 {
 	line-height: 1em;
 }
 
-ol, ul, p {
+dl, ol, ul, p {
 	color: $medium-text-color;
 	font-size: 1.125em;
 	font-weight: 400;
 	line-height: 2.125em;
 }
 
-ol, ul {
+dt {
+	font-weight: 800;
+}
+
+ol, ul, dd {
 	padding-left: 1.5em;
 }
 
