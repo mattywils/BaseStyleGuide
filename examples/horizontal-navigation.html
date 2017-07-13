@@ -1,0 +1,222 @@
+<html>
+    <head>
+        <title>Example Horizontal Navigation</title>
+
+        <link href="../stylesheets/base.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <style type="text/css">
+            .container {
+                max-width: 75em;
+                padding: 0 2em;
+            }
+
+            body {
+                border-top: 1px solid #EEAB3A;
+                font-family: 'Merriweather', serif;
+            }
+
+            .navigationContainer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                display: inline-block;
+            }
+
+            .logo h2 {
+                letter-spacing: .05em;
+                text-transform: uppercase;
+            }
+
+            .logo h2 small {
+                font-size: .5em;
+            }
+
+            .nav {
+                display: inline-block;
+            }
+
+            .nav li {
+                display: inline-block;
+                letter-spacing: .05em;
+                list-style: none;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                padding-right: 1em;
+                text-transform: uppercase;
+            }
+
+            .removePadding {
+                padding-right: 0 !important;
+            }
+
+            .nav li a {
+                color: #22222C;
+                transition: color 0.3s ease;
+            }
+
+            .nav li a:after {
+                content: "";
+                display: block;
+                width: 0%;
+                border-bottom: .0625em solid #EEAB3A;
+                opacity: 0;
+                transition: width 0.3s ease, opacity 0.3s ease;
+            }
+
+            .nav li a:hover {
+                color: #55555C;
+            }
+
+            .nav li a:hover:after {
+                width: 100%;
+                opacity: 1;
+            }
+
+            .mobile-nav-container {
+                display: none;
+            }
+
+            .mobile-nav {
+                border-top: 0.125em solid #eaeaea;
+                display: block;
+                padding: 20px 30px;
+                text-align: center;
+            }
+
+            .mobile-nav li {
+                letter-spacing: .05em;
+                list-style: none;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                padding: 10px 0;
+            }
+
+            .mobile-nav li a {
+                color: #22222C;
+            }
+
+            .mobile-nav li a:hover {
+                color: #55555C;
+            }
+
+            .menu-sandwhich-icon {
+                cursor: pointer;
+                width: 2em;
+            }
+
+            .menu-sandwhich-icon .borderBar {
+                fill: white;
+                stroke: #22222C;
+                transition: stroke 0.3s ease;
+            }
+
+            .menu-sandwhich-icon:hover .borderBar {
+                stroke: #EEAB3A;
+            }
+
+            .menu-sandwhich-icon .innerBar {
+                fill: #22222C;
+                transition: fill 0.3s ease;
+            }
+
+            .menu-sandwhich-icon:hover .innerBar {
+                fill: #EEAB3A;
+            }
+
+            .hero {
+                background-color: #333;
+                background-position: center;
+                background-size: cover;
+                color: white;
+                padding: 3em 0;
+                text-align: center;
+            }
+
+            .hero h3 {
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 300;
+                letter-spacing: .125em;
+                text-transform: uppercase;
+            }
+
+            .hero h1 {
+                font-family: 'Merriweather', serif;
+                font-size: 3em;
+                letter-spacing: .125em;
+            }
+
+            .hero .btn {
+                font-family: 'Open Sans', sans-serif;
+                text-transform: uppercase;
+                background-color: white;
+                border: none;
+            }
+
+            .hero .btn:hover {
+                color: #EEAB3A;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container center">
+                <div class="column-12 navigationContainer">
+                    <div class="logo">
+                        <h2><small>The </small>Word<small> and </small>Work</h2>
+                    </div>
+                    <ul class="nav">
+                        <li class="mobile-landscape-hide mobile-portrait-hide"><a href="#">Home</a></li>
+                        <li class="mobile-landscape-hide mobile-portrait-hide"><a href="#">About</a></li>
+                        <li class="mobile-landscape-hide mobile-portrait-hide"><a href="#">Archives</a></li>
+                        <li class="mobile-landscape-hide mobile-portrait-hide removePadding"><a href="#">Contact</a></li>
+                        <li class="hide mobile-landscape-reveal mobile-portrait-reveal removePadding">
+                            <svg class="menu-sandwhich-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" onclick="toggleNavigation()">
+                                <rect class="borderBar" x="30" y="30" rx="150" ry="150" width="580" height="580" stroke-width="60"></rect>
+                                <rect class="innerBar" x="140" y="190" rx="15" ry="15" width="360" height="60"></rect>
+                                <rect class="innerBar" x="140" y="290" rx="15" ry="15" width="360" height="60"></rect>
+                                <rect class="innerBar" x="140" y="390" rx="15" ry="15" width="360" height="60"></rect>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column-12 mobile-nav-container">
+                <ul class="mobile-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Archives</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="hero" style="background-image: url('robert-lukeman-150146.jpg');">
+            <div class="container center">
+                <div class="column-12">
+                    <h3>Current Issue</h3>
+                    <h1>February 2017</h1>
+                    <a href="#" class="btn">Read now</a>
+                </div>
+            </div>
+        </section>
+
+        <script type="text/javascript">
+            function toggleNavigation() {
+                var navigationElement = document.getElementsByClassName("mobile-nav-container")[0];
+                if(navigationElement.style.display === "none") {
+                    navigationElement.style.display = "block";
+                } else {
+                    navigationElement.style.display = "none";
+                }
+            }
+        </script>
+
+    </body>
+</html>

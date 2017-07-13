@@ -30,6 +30,10 @@ $offset-count: $global-offset-count;
 	$offset-count: $offset-count - 1;
 }
 
+.hide {
+	display: none !important;
+}
+
 /* Mobile Portrait */
 @media
 	screen and (max-width: 981px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait),
@@ -52,7 +56,11 @@ $offset-count: $global-offset-count;
 	}
 
 	.mobile-portrait-hide {
-		display: none;
+		display: none !important;
+	}
+
+	.mobile-portrait-reveal {
+		display: inherit !important;
 	}
 }
 
@@ -78,6 +86,10 @@ $offset-count: $global-offset-count;
 	}
 
 	.mobile-landscape-hide {
-		display: none;
+		display: none !important;
+	}
+
+	.mobile-landscape-reveal {
+		display: inherit !important;
 	}
 }
